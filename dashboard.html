@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/Logo1.webp" type="image">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="index.html">Rekap Barang</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="content">
+            <!-- Tombol Logout -->
+            <div class="logout-container">
+                <span id="logged-in-user">User: Tekno Ponsel</span>
+                <button id="logout-button" class="btn-logout">Logout</button>
+            </div>
+
+            <div class="greeting">
+                <h1>Selamat Datang!</h1>
+                <p>Hai! Selamat datang di aplikasi rekap barang. Kami senang Anda bergabung!</p>
+                <p>Di sini Anda bisa menyimpan dan mengelola barang-barang Anda dengan mudah.</p>
+                <p>Semoga aplikasi ini membantu Anda lebih produktif dan terorganisir!</p>
+            </div>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Rekap Barang Tersimpan</h3>
+                    <p id="totalBarang">0 Barang</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Biaya</h3>
+                    <p id="totalBiaya">Rp 0</p>
+                </div>
+            </section>
+
+            <section class="overview">
+                <h2>Bagaimana Cara Kerja Aplikasi Ini?</h2>
+                <p>
+                    Dengan aplikasi ini, Anda dapat dengan mudah menyimpan informasi barang dan 
+                    menghitung biaya barang yang Anda kelola. Data yang Anda masukkan akan disimpan 
+                    dan bisa dilihat kapan saja di dashboard ini.
+                </p>
+            </section>
+
+            <!-- Tombol Hapus Semua Data -->
+            <section class="actions">
+                <button id="hapusDataBtn" class="btn-hapus">Hapus Semua Data</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

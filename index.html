@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Barang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/Logo1.webp" type="image">
+</head>
+<body>
+    <!-- Cek apakah pengguna sudah login -->
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            // Jika tidak login, redirect ke halaman login
+            window.location.href = "login.html"; // Pastikan halaman login berada di direktori yang benar
+        }
+    </script>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="index.html" class="active">Rekap Barang</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="content">
+            <h1>Rekap Barang</h1>
+
+            <!-- Tabel Input Barang -->
+            <table id="inputBarangTable">
+                <thead>
+                    <tr>
+                        <th>Barang</th>
+                        <th>Gambar</th>
+                        <th>Kegunaan/Fungsi</th>
+                        <th>Alasan</th>
+                        <th>Biaya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Baris Inputan -->
+                    <tr>
+                        <td><input type="text" class="input-barang" placeholder="Nama Barang"></td>
+                        <td><input type="file" class="input-gambar"></td>
+                        <td><input type="text" class="input-kegunaan" placeholder="Kegunaan/Fungsi"></td>
+                        <td><input type="text" class="input-alasan" placeholder="Alasan"></td>
+                        <td><input type="number" class="input-biaya" placeholder="Biaya"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button id="saveDataBtn">Simpan Data</button>
+
+            <!-- Tabel Rekap Barang -->
+            <h2>Data Barang</h2>
+            <table id="rekapBarangTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Barang</th>
+                        <th>Gambar</th>
+                        <th>Kegunaan/Fungsi</th>
+                        <th>Alasan</th>
+                        <th>Biaya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data akan diisi secara dinamis -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
